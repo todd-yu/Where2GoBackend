@@ -1,0 +1,23 @@
+{
+  "name": "where2goserver",
+  "version": "1.0.0",
+  "description": "A server for the Where2Go app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/todd-yu/Where2GoBackend.git"
+  },
+  "author": "Todd Yu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/todd-yu/Where2GoBackend/issues"
+  },
+  "homepage": "https://github.com/todd-yu/Where2GoBackend#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
+  }
+}
