@@ -10,14 +10,23 @@ app.get('/', (req, res) => res.send('hello world'));
 
 app.route('/users/:userId')
   .get(function(req, res, next) {
-    connection.query(
-      "SELECT * FROM `userID` WHERE id = ? LIMIT 3", req.params.userId,
-      function(error, results, fields) {
+    console.log(req.params);
+    connection.query("SELECT * FROM `userID` WHERE id = ? LIMIT 3", req.params.userId,
+        function(error, results, fields) {
         if (error) throw error;
         res.json(results);
       }
     );
   });
+
+// CREATE DATABASE guestbook;
+// USE guestbook;
+// CREATE TABLE entries (guestName VARCHAR(255), content VARCHAR(255),
+// entryID INT NOT NULL AUTO_INCREMENT, PRIMARY KEY(entryID));
+// INSERT INTO entries (guestName, content) values ("first guest", "I got here!");
+// INSERT INTO entries (guestName, content) values ("second guest", "Me too!");
+// SELECT * FROM entries;
+// 
 
 app.get('/status', (req, res) => res.send('Working!'));
 
